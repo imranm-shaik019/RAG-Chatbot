@@ -4,6 +4,8 @@ torch                   # Required backend for transformers
 faiss-cpu               # Vector similarity search
 sentence-transformers   # For embedding documents & queries
 pdfplumber              # Extract text & tables from PDFs
+flask
+flask-cors
 rank-bm25               # If using multi-stage retrieval w/ BM25
 pandas                  # For table data & general data manipulation
 numpy                   # For numerical operations
