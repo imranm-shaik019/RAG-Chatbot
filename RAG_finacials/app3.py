@@ -129,6 +129,9 @@ def generate_response(query: str, mode: str = "multi-stage") -> str:
     top_result = results[0]  # Best match
     similarity_score = top_result.get("similarity", 0.0)  # Default to 0.0 instead of "N/A"
 
+    if similarity_score <= 0.5:
+        return "Sorry! I cannot answer this query at the moment."    
+
     return f"**Answer:** {top_result['text']}\n\n**Confidence Score:** {similarity_score:.4f}"
 
 # === Multi-Stage Retrieval ===
